@@ -1,4 +1,4 @@
-package com.example.jpapractice.ch02;
+package com.example.jpapractice.ch02.jpa;
 
 import lombok.Data;
 
