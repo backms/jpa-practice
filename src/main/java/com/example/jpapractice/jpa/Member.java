@@ -1,4 +1,4 @@
-package com.example.jpapractice.ch02.jpa;
+package com.example.jpapractice.jpa;
 
 import lombok.Data;
 
@@ -7,9 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+@Data
 @Entity
 @Table(name="MEMBER")
-@Data
 public class Member {
 
     @Id
@@ -20,6 +20,5 @@ public class Member {
     private String username;
 
     private Integer age;
-
 
 }
