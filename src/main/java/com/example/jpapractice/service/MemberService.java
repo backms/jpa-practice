@@ -1,4 +1,5 @@
 package com.example.jpapractice.service;
 
-public class MemberService {
+public interface MemberService {
+    void memberRegist();
 }

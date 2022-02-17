@@ -1,4 +1,12 @@
 package com.example.jpapractice.service;
 
-public class MemberServiceImpl extends MemberService{
+import org.springframework.stereotype.Service;
+
+@Service
+public class MemberServiceImpl implements MemberService {
+
+    @Override
+    public void memberRegist() {
+
+    }
 }
