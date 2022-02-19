@@ -2,18 +2,15 @@ package com.example.jpapractice.jpa;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Data
 @Entity
 @Table(name="MEMBER")
-public class Member {
+public class MemberEntity {
 
     @Id
-    @Column(name="ID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private String id;
 
     @Column(name="NAME")

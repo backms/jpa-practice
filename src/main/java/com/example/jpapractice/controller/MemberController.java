@@ -1,5 +1,6 @@
 package com.example.jpapractice.controller;
 
+import com.example.jpapractice.dto.MemberDto;
 import com.example.jpapractice.service.MemberService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
