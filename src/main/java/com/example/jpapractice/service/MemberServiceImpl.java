@@ -16,14 +16,9 @@ public class MemberServiceImpl implements MemberService {
     }
 
     @Override
-    public void memberRegist() {
+    public void memberRegist(MemberDto memberDto) {
 
         ModelMapper mapper = new ModelMapper();
-
-        MemberDto memberDto = new MemberDto();
-
-        memberDto.setUserName("철수");
-        memberDto.setAge("29");
 
         MemberEntity memberEntity = mapper.map(memberDto, MemberEntity.class);
 

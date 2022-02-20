@@ -2,10 +2,12 @@ package com.example.jpapractice.controller;
 
 import com.example.jpapractice.dto.MemberDto;
 import com.example.jpapractice.service.MemberService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.example.jpapractice.vo.RequestMember;
+import com.example.jpapractice.vo.ResponseMember;
+import org.modelmapper.ModelMapper;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/")
@@ -23,11 +25,17 @@ public class MemberController {
     }
 
     @PostMapping("/ch2")
-    public String ch02(){
+    public ResponseEntity<ResponseMember> ch02(@RequestBody RequestMember requestMember){
 
-        memberService.memberRegist();
+        ModelMapper mapper = new ModelMapper();
 
-        return null;
+        MemberDto memberDto = mapper.map(requestMember, MemberDto.class);
+
+        memberService.memberRegist(memberDto);
+
+        ResponseMember responseMember = mapper.map(memberDto, ResponseMember.class);
+
+        return ResponseEntity.status(HttpStatus.OK).body(responseMember);
     }
 
 }
