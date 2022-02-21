@@ -6,6 +6,8 @@ import com.example.jpapractice.jpa.MemberRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
+
 @Service
 public class MemberServiceImpl implements MemberService {
 
@@ -16,6 +18,7 @@ public class MemberServiceImpl implements MemberService {
     }
 
     @Override
+    @Transactional
     public void memberRegist(MemberDto memberDto) {
 
         ModelMapper mapper = new ModelMapper();
