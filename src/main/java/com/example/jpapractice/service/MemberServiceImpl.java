@@ -28,4 +28,9 @@ public class MemberServiceImpl implements MemberService {
         memberRepository.save(memberEntity);
 
     }
+
+    @Override
+    public Iterable<MemberEntity> getMemberByAll() {
+        return memberRepository.findAll();
+    }
 }
