@@ -7,4 +7,6 @@ public interface MemberService {
     void memberRegist(MemberDto memberDto);
 
     Iterable<MemberEntity> getMemberByAll();
+
+    MemberDto findMemberById(Long id);
 }

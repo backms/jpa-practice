@@ -55,4 +55,14 @@ public class MemberController {
         return ResponseEntity.status(HttpStatus.OK).body(result);
     }
 
+    @GetMapping("/member/{id}")
+    public ResponseEntity<ResponseMember> getMemberById(@PathVariable Long id) {
+
+        MemberDto memberDto = memberService.findMemberById(id);
+
+        ResponseMember responseMember = new ModelMapper().map(memberDto, ResponseMember.class);
+
+        return ResponseEntity.status(HttpStatus.OK).body(responseMember);
+    }
+
 }

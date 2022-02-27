@@ -7,6 +7,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.util.Optional;
 
 @Service
 public class MemberServiceImpl implements MemberService {
@@ -32,5 +33,15 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public Iterable<MemberEntity> getMemberByAll() {
         return memberRepository.findAll();
+    }
+
+    @Override
+    public MemberDto findMemberById(Long id) {
+
+        Optional<MemberEntity> memberEntity = memberRepository.findById(id);
+
+        MemberDto memberDto = new ModelMapper().map(memberEntity, MemberDto.class);
+
+        return memberDto;
     }
 }
