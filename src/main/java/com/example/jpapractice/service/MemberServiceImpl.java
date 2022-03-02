@@ -38,7 +38,7 @@ public class MemberServiceImpl implements MemberService {
     @Override
     public MemberDto findMemberById(Long id) {
 
-        Optional<MemberEntity> memberEntity = memberRepository.findById(id);
+        MemberEntity memberEntity = memberRepository.findById(id).get();
 
         MemberDto memberDto = new ModelMapper().map(memberEntity, MemberDto.class);
 
