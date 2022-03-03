@@ -65,4 +65,19 @@ public class MemberController {
         return ResponseEntity.status(HttpStatus.OK).body(responseMember);
     }
 
+    @PutMapping("/member/{id}")
+    public ResponseEntity<ResponseMember> editMember(@PathVariable Long id, @RequestBody RequestMember requestMember){
+
+        MemberDto memberDto = memberService.findMemberById(id);
+
+        memberDto.setAge(requestMember.getAge());
+        memberDto.setUserName(requestMember.getUserName());
+
+        memberService.memberRegist(memberDto);
+
+        ResponseMember responseMember = new ModelMapper().map(memberDto, ResponseMember.class);
+
+        return ResponseEntity.status(HttpStatus.OK).body(responseMember);
+    }
+
 }
