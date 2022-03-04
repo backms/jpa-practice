@@ -80,4 +80,10 @@ public class MemberController {
         return ResponseEntity.status(HttpStatus.OK).body(responseMember);
     }
 
+    @DeleteMapping("/member/{id}")
+    public void deleteMember(@PathVariable Long id) {
+
+        memberService.deleteById(id);
+    }
+
 }

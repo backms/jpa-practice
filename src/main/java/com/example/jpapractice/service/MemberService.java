@@ -9,4 +9,6 @@ public interface MemberService {
     Iterable<MemberEntity> getMemberByAll();
 
     MemberDto findMemberById(Long id);
+
+    void deleteById(Long id);
 }
