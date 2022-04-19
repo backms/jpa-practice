@@ -3,6 +3,7 @@ package com.example.jpapractice.jpa;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Data
 @Entity
@@ -17,5 +18,21 @@ public class MemberEntity {
     private String username;
 
     private Integer age;
+
+    @Enumerated(EnumType.STRING)
+    private RoleType roleType;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date createDate;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date lastModifiedDate;
+
+    @Lob
+    private String description;
+
+    public enum RoleType {
+        ADMIN, USER
+    }
 
 }
