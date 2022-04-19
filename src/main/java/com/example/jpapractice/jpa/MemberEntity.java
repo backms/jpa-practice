@@ -1,5 +1,6 @@
 package com.example.jpapractice.jpa;
 
+import com.example.jpapractice.etc.RoleType;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -31,8 +32,7 @@ public class MemberEntity {
     @Lob
     private String description;
 
-    public enum RoleType {
-        ADMIN, USER
-    }
+    @Transient
+    private String temp;
 
 }
