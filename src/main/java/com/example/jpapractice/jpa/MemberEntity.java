@@ -1,6 +1,6 @@
 package com.example.jpapractice.jpa;
 
-import com.example.jpapractice.etc.RoleType;
+import com.example.jpapractice.common.RoleType;
 import lombok.Data;
 
 import javax.persistence.*;
@@ -29,7 +29,7 @@ public class MemberEntity {
     @Temporal(TemporalType.TIMESTAMP)
     private Date lastModifiedDate;
 
-    @Lob
+    @Lob                        // clob, blob 등으로 길이 제한이 없음
     private String description;
 
     @Transient

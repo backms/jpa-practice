@@ -1,4 +1,4 @@
-package com.example.jpapractice.etc;
+package com.example.jpapractice.common;
 
 public enum RoleType {
 
