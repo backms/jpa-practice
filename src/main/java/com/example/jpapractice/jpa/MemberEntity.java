@@ -8,14 +8,17 @@ import java.util.Date;
 
 @Data
 @Entity
-@Table(name="MEMBER")
+@Table(name="MEMBER", uniqueConstraints = {@UniqueConstraint(
+        name = "NAME_AGE_UNIQUE",
+        columnNames = {"NAME", "AGE"})})
 public class MemberEntity {
 
     @Id
+    @Column(name = "ID")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name="NAME")
+    @Column(name="NAME", nullable = false, length = 10)
     private String username;
 
     private Integer age;
