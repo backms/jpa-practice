@@ -23,16 +23,16 @@ public class MemberEntity {
 
     private Integer age;
 
-    @Enumerated(EnumType.STRING)
+    @Enumerated(EnumType.STRING)            // Enumerated - 자바의 enum 타입을 매핑할 때 사용
     private RoleType roleType;
 
-    @Temporal(TemporalType.TIMESTAMP)
+    @Temporal(TemporalType.TIMESTAMP)       // Temporal - 날짜 타입을 매핑할 때 사용
     private Date createDate;
 
     @Temporal(TemporalType.TIMESTAMP)
     private Date lastModifiedDate;
 
-    @Lob                        // clob, blob 등으로 길이 제한이 없음
+    @Lob                                    // clob, blob 등으로 길이 제한이 없음
     private String description;
 
     @Transient
