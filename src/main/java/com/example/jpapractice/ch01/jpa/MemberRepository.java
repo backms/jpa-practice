@@ -1,4 +1,4 @@
-package com.example.jpapractice.jpa;
+package com.example.jpapractice.ch01.jpa;
 
 import org.springframework.data.repository.CrudRepository;
 

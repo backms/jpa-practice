@@ -1,10 +1,10 @@
-package com.example.jpapractice.controller;
+package com.example.jpapractice.ch01.controller;
 
-import com.example.jpapractice.dto.MemberDto;
-import com.example.jpapractice.jpa.MemberEntity;
-import com.example.jpapractice.service.MemberService;
-import com.example.jpapractice.vo.RequestMember;
-import com.example.jpapractice.vo.ResponseMember;
+import com.example.jpapractice.ch01.dto.MemberDto;
+import com.example.jpapractice.ch01.jpa.MemberEntity;
+import com.example.jpapractice.ch01.service.MemberService;
+import com.example.jpapractice.ch01.vo.RequestMember;
+import com.example.jpapractice.ch01.vo.ResponseMember;
 import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

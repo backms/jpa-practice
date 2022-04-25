@@ -1,4 +1,4 @@
-package com.example.jpapractice.vo;
+package com.example.jpapractice.ch01.vo;
 
 import lombok.Data;
 

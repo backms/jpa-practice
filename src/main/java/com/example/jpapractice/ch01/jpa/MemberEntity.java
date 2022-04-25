@@ -1,6 +1,6 @@
-package com.example.jpapractice.jpa;
+package com.example.jpapractice.ch01.jpa;
 
-import com.example.jpapractice.common.RoleType;
+import com.example.jpapractice.ch01.common.RoleType;
 import lombok.Data;
 
 import javax.persistence.*;

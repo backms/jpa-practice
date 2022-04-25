@@ -1,13 +1,12 @@
-package com.example.jpapractice.service;
+package com.example.jpapractice.ch01.service;
 
-import com.example.jpapractice.dto.MemberDto;
-import com.example.jpapractice.jpa.MemberEntity;
-import com.example.jpapractice.jpa.MemberRepository;
+import com.example.jpapractice.ch01.dto.MemberDto;
+import com.example.jpapractice.ch01.jpa.MemberEntity;
+import com.example.jpapractice.ch01.jpa.MemberRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.util.Optional;
 
 @Service
 public class MemberServiceImpl implements MemberService {

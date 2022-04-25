@@ -1,9 +1,9 @@
-package com.example.jpapractice.vo;
+package com.example.jpapractice.ch01.dto;
 
 import lombok.Data;
 
 @Data
-public class ResponseMember {
+public class MemberDto {
 
     private long id;
     private String userName;
