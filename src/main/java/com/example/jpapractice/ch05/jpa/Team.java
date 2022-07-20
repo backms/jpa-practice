@@ -5,9 +5,11 @@ import lombok.Data;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
 @Data
+@Table(name = "TEAM5")
 public class Team {
 
     @Id
