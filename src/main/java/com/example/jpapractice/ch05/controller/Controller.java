@@ -31,7 +31,7 @@ public class Controller {
 
         MemberDto memberDto = mapper.map(requestMember, MemberDto.class);
 
-//        service.insertMember(memberDto);
+        service.insertMember(memberDto);
 
         ResponseMember responseMember = mapper.map(memberDto, ResponseMember.class);
 
