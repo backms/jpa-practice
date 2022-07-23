@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Entity
 @Data
 @Table(name="MEMBER5")
-public class Member {
+public class Member05 {
 
     @Id
     @Column(name = "MEMBER_ID")
@@ -18,10 +18,10 @@ public class Member {
     // 연관관계 매핑
     @ManyToOne
     @JoinColumn(name = "TEAM_ID")
-    private Team team;
+    private Team05 team;
 
     // 연관관계 설정
-    public void setTeam(Team team){
+    public void setTeam(Team05 team){
         this.team = team;
     }
 

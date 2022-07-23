@@ -1,6 +1,6 @@
 package com.example.jpapractice.ch05.vo;
 
-import com.example.jpapractice.ch05.jpa.Team;
+import com.example.jpapractice.ch05.jpa.Team05;
 import lombok.Data;
 
 import javax.validation.constraints.NotNull;
@@ -15,6 +15,6 @@ public class RequestMember {
     private String username;
 
     @NotNull
-    private Team team;
+    private Team05 team;
 
 }

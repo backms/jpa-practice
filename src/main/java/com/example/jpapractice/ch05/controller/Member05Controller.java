@@ -2,8 +2,7 @@ package com.example.jpapractice.ch05.controller;
 
 import com.example.jpapractice.ch05.dto.MemberDto;
 import com.example.jpapractice.ch05.dto.TeamDto;
-import com.example.jpapractice.ch05.jpa.Team;
-import com.example.jpapractice.ch05.service.MemberService;
+import com.example.jpapractice.ch05.service.Member05Service;
 import com.example.jpapractice.ch05.vo.RequestMember;
 import com.example.jpapractice.ch05.vo.RequestTeam;
 import com.example.jpapractice.ch05.vo.ResponseMember;
@@ -11,15 +10,15 @@ import com.example.jpapractice.ch05.vo.ResponseTeam;
 import org.modelmapper.ModelMapper;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
-public class MemberController {
+@RestController
+@RequestMapping("/ch05")
+public class Member05Controller {
 
-    private MemberService memberService;
+    private Member05Service memberService;
 
-    public MemberController(MemberService memberService){
+    public Member05Controller(Member05Service memberService){
         this.memberService = memberService;
     }
 

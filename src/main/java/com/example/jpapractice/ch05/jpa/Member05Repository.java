@@ -2,5 +2,5 @@ package com.example.jpapractice.ch05.jpa;
 
 import org.springframework.data.repository.CrudRepository;
 
-public interface TeamRepository extends CrudRepository<Team, String> {
+public interface Member05Repository extends CrudRepository<Member05, String> {
 }

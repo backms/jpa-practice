@@ -2,20 +2,20 @@ package com.example.jpapractice.ch05.service;
 
 import com.example.jpapractice.ch05.dto.MemberDto;
 import com.example.jpapractice.ch05.dto.TeamDto;
-import com.example.jpapractice.ch05.jpa.Member;
-import com.example.jpapractice.ch05.jpa.MemberRepository;
-import com.example.jpapractice.ch05.jpa.Team;
-import com.example.jpapractice.ch05.jpa.TeamRepository;
+import com.example.jpapractice.ch05.jpa.Member05;
+import com.example.jpapractice.ch05.jpa.Member05Repository;
+import com.example.jpapractice.ch05.jpa.Team05;
+import com.example.jpapractice.ch05.jpa.Team05Repository;
 import org.modelmapper.ModelMapper;
 
 @org.springframework.stereotype.Service
-public class MemberServiceImpl implements MemberService {
+public class Member05ServiceImpl implements Member05Service {
 
-    private MemberRepository memberRepository;
+    private Member05Repository memberRepository;
 
-    private TeamRepository teamRepository;
+    private Team05Repository teamRepository;
 
-    public MemberServiceImpl(MemberRepository memberRepository, TeamRepository teamRepository){
+    public Member05ServiceImpl(Member05Repository memberRepository, Team05Repository teamRepository){
         this.memberRepository = memberRepository;
         this.teamRepository = teamRepository;
     }
@@ -27,9 +27,9 @@ public class MemberServiceImpl implements MemberService {
 
         // to-do : member에 Team셋팅
 
-        Member member1 = mapper.map(memberDto, Member.class);
+        Member05 member = mapper.map(memberDto, Member05.class);
 
-        memberRepository.save(member1);
+        memberRepository.save(member);
 
     }
 
@@ -38,7 +38,7 @@ public class MemberServiceImpl implements MemberService {
 
         ModelMapper mapper = new ModelMapper();
 
-        Team team = mapper.map(teamDto, Team.class);
+        Team05 team = mapper.map(teamDto, Team05.class);
 
         teamRepository.save(team);
 
