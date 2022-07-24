@@ -25,8 +25,6 @@ public class Member05ServiceImpl implements Member05Service {
 
         ModelMapper mapper = new ModelMapper();
 
-        // to-do : member에 Team셋팅
-
         Member05 member = mapper.map(memberDto, Member05.class);
 
         memberRepository.save(member);
