@@ -42,5 +42,15 @@ public class Member05ServiceImpl implements Member05Service {
 
     }
 
+    @Override
+    public Iterable<Member05> getMemberAll() {
+        return memberRepository.findAll();
+    }
+
+    @Override
+    public Iterable<Team05> getTeamAll() {
+        return teamRepository.findAll();
+    }
+
 
 }
