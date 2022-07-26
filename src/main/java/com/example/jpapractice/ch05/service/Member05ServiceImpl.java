@@ -52,5 +52,25 @@ public class Member05ServiceImpl implements Member05Service {
         return teamRepository.findAll();
     }
 
+    @Override
+    public MemberDto findMemberById(String id) {
+
+        Member05 member = memberRepository.findById(id).get();
+
+        MemberDto memberDto = new ModelMapper().map(member, MemberDto.class);
+
+        return memberDto;
+    }
+
+    @Override
+    public TeamDto findTeamById(String id) {
+
+        Team05 team = teamRepository.findById(id).get();
+
+        TeamDto teamDto = new ModelMapper().map(team, TeamDto.class);
+
+        return teamDto;
+    }
+
 
 }

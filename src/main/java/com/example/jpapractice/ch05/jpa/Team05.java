@@ -2,10 +2,9 @@ package com.example.jpapractice.ch05.jpa;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 @Data
@@ -17,5 +16,8 @@ public class Team05 {
     private String id;
 
     private String name;
+
+    @OneToMany(mappedBy = "team")
+    private List<Member05> members = new ArrayList<>();
 
 }

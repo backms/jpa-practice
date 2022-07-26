@@ -29,7 +29,7 @@ public class Member05Controller {
 
     @GetMapping("/health_check")
     public String status() {
-        return "Welcom to Ch05";
+        return "Welcome to Ch05";
     }
 
     @GetMapping("/member")
@@ -43,6 +43,16 @@ public class Member05Controller {
         });
 
         return ResponseEntity.status(HttpStatus.OK).body(result);
+    }
+
+    @GetMapping("/member/{id}")
+    public ResponseEntity<ResponseMember> getMemberById(@PathVariable String id){
+
+        MemberDto memberDto = memberService.findMemberById(id);
+
+        ResponseMember responseMember = new ModelMapper().map(memberDto, ResponseMember.class);
+
+        return ResponseEntity.status(HttpStatus.OK).body(responseMember);
     }
 
     @PostMapping("/member")
@@ -59,6 +69,8 @@ public class Member05Controller {
         return ResponseEntity.status(HttpStatus.OK).body(responseMember);
     }
 
+    // to-do : put, delete
+
     @GetMapping("/team")
     public ResponseEntity<List<ResponseTeam>> getTeam(){
 
@@ -70,6 +82,16 @@ public class Member05Controller {
         });
 
         return ResponseEntity.status(HttpStatus.OK).body(result);
+    }
+
+    @GetMapping("/team/{id}")
+    public ResponseEntity<ResponseTeam> getTeamById(@PathVariable String id){
+
+        TeamDto teamDto = memberService.findTeamById(id);
+
+        ResponseTeam responseTeam = new ModelMapper().map(teamDto, ResponseTeam.class);
+
+        return ResponseEntity.status(HttpStatus.OK).body(responseTeam);
     }
 
     @PostMapping("/team")

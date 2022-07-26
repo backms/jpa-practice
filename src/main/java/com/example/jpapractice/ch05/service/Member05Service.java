@@ -13,4 +13,8 @@ public interface Member05Service {
     Iterable<Member05> getMemberAll();
 
     Iterable<Team05> getTeamAll();
+
+    MemberDto findMemberById(String id);
+
+    TeamDto findTeamById(String id);
 }
