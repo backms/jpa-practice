@@ -23,6 +23,12 @@ public class Member05 {
     // 연관관계 설정
     public void setTeam(Team05 team){
         this.team = team;
+
+        // 무한 루프 빵지 체크
+        if(!team.getMembers().contains(this)){
+            team.getMembers().add(this);
+        }
+
     }
 
 }

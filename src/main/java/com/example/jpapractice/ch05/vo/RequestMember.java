@@ -14,7 +14,4 @@ public class RequestMember {
     @NotNull
     private String username;
 
-    @NotNull
-    private Team05 team;
-
 }
